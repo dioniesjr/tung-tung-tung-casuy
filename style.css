@@ -1,0 +1,172 @@
+/* Universal box model */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout: flexbox — full-page column structure */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 45%, #334155 100%);
+  color: #1e293b;
+}
+
+/* Header — background color and spacing */
+header {
+  background-color: #1e3a5f;
+  color: #f8fafc;
+  padding: 28px 20px;
+  text-align: center;
+  border-bottom: 4px solid #f59e0b;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+/* Main — margin, padding, max-width, and grid layout */
+main {
+  flex: 1;
+  max-width: 900px;
+  width: 92%;
+  margin: 36px auto;
+  padding: 32px 28px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+@media (min-width: 700px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+h2 {
+  color: #1e3a5f;
+  margin-bottom: 18px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #f59e0b;
+  padding-bottom: 8px;
+}
+
+.list-title {
+  color: #475569;
+  font-size: 1rem;
+  margin: 24px 0 10px;
+  font-weight: 600;
+}
+
+/* Paragraph 1 — different font and color */
+.para-one {
+  font-family: Verdana, Geneva, sans-serif;
+  color: #1d4ed8;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+/* Paragraph 2 — different font and color */
+.para-two {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #9a3412;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.para-two strong {
+  color: #1e3a5f;
+  font-weight: 700;
+}
+
+/* List — custom spacing and text styling */
+ul {
+  line-height: 2;
+  padding-left: 28px;
+  margin-bottom: 8px;
+  list-style-type: square;
+}
+
+ul li {
+  color: #334155;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+ul li::marker {
+  color: #f59e0b;
+}
+
+ul li:hover {
+  background-color: #f1f5f9;
+  padding-left: 14px;
+}
+
+ul li:first-child {
+  font-weight: 600;
+}
+
+/* Image — border, margin, alignment, and positioning */
+.media-block {
+  position: relative;
+}
+
+.hero {
+  text-align: center;
+  padding: 24px 16px;
+  background-color: #0f172a;
+  border-radius: 10px;
+}
+
+.hero img {
+  display: block;
+  margin: 0 auto 12px;
+  border: 4px solid #f59e0b;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
+}
+
+.hero figcaption {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* Footer — smaller text and background color */
+footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  font-size: 0.8em;
+  padding: 16px;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer p {
+  letter-spacing: 0.03em;
+}
